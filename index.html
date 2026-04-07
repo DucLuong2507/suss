@@ -6,7 +6,11 @@
     <title>Bảo Vệ Môi Trường - a1k33</title>
     
     <link rel="shortcut icon" href="https://files.catbox.moe/mjrrrw.jpeg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- THÊM FONT BE VIETNAM PRO VÀ POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
         /* ================= BIẾN CSS ================= */
@@ -81,10 +85,22 @@
 
         /* TRANG CHỦ & TYPING EFFECT */
         #trang-chu { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+        
+        /* ĐÃ CẬP NHẬT FONT "BE VIETNAM PRO" VÀ TĂNG KÍCH THƯỚC */
         .animated-gradient-text {
-            font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 800; margin-bottom: 15px;
-            background: linear-gradient(to right, #2ecc71, #00d2ff, #2ecc71); background-size: 200% auto;
-            color: transparent; -webkit-background-clip: text; animation: gradientMove 3s linear infinite; z-index: 2;
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 900; /* Bản đậm nhất */
+            font-size: clamp(3.5rem, 8vw, 6.5rem); /* Tăng size lên so với bản cũ */
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #2ecc71, #00d2ff, #2ecc71); 
+            background-size: 200% auto;
+            color: transparent; 
+            -webkit-background-clip: text; 
+            background-clip: text;
+            animation: gradientMove 3s linear infinite; 
+            z-index: 2;
+            text-transform: uppercase;
         }
         
         /* Gõ chữ */
@@ -172,7 +188,6 @@
             .split-layout { grid-template-columns: 1fr; gap: 20px; }
             .split-image { min-height: 250px; }
             section { padding: 80px 5% 40px; scroll-margin-top: 80px;}
-            /* Trên mobile, Hậu quả đảo ngược bị đè, chỉnh lại order */
             #hau-qua .split-layout .split-text { order: 2; }
             #hau-qua .split-layout .split-image { order: 1; }
         }
@@ -244,7 +259,7 @@
             </div>
         </section>
 
-        <!-- HẬU QUẢ TÁCH RIÊNG (Đảo chiều Layout) -->
+        <!-- HẬU QUẢ TÁCH RIÊNG -->
         <section id="hau-qua">
             <h2 class="fade-in">Hậu Quả Nghiêm Trọng</h2>
             <div class="split-layout fade-in">
@@ -264,7 +279,7 @@
             </div>
         </section>
 
-        <!-- BỔ SUNG 6 GIẢI PHÁP CHI TIẾT -->
+        <!-- GIẢI PHÁP -->
         <section id="giai-phap">
             <h2 class="fade-in">Giải Pháp Hành Động</h2>
             <div class="card-grid fade-in">
